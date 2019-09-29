@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The project deployed to: https://dashboard.heroku.com/apps/supply-demand-tables/logs
+
 Before start:
 
 ```
