@@ -3,8 +3,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const chalk = require("chalk");
 const router = require("./router");
-const session = require("express-session");
-const RedisStore = require("connect-redis")(session);
 
 require("dotenv").config();
 
@@ -25,16 +23,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-app.use(
-  session({
-    store:
-      process.env.NODE_ENV === "production"
-        ? new RedisStore({
-            url: process.env.REDIS_URL,
-          })
-        : null,
-  }),
-);
 
 app.listen(PORT, () =>
   console.log(`${chalk.blue("Compare Tables")} is listening on port: ${PORT}`),

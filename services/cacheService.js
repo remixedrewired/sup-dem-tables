@@ -1,4 +1,9 @@
-const redis = require("redis").createClient();
+let redis;
+if (process.env.NODE_ENV === "production") {
+  redis = require("redis").createClient(process.env.REDIS_URL);
+} else {
+  redis = require("redis").createClient();
+}
 const util = require("util");
 
 class Cache {
