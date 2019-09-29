@@ -4,7 +4,7 @@ Before start:
 
 ```
 npm i
-cd server
+cd client
 npm i
 ```
 
@@ -21,13 +21,18 @@ Server listens to [http://localhost:5000](http://localhost:5000)
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm start`
+### `npm run client`
 
-Runs the app in the development mode.<br>
+Runs client part of the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+### `npm start`
+
+Runs server part of the app in the development mode.<br>
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ### `npm test`
 
